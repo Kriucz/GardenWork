@@ -1,0 +1,373 @@
+@import 'colors.scss';
+@import 'animista.scss';
+
+en *,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	font-family: 'Asap', sans-serif;
+	background-color: $bg-color;
+	color: $font-color;
+}
+
+h1,
+h2 {
+	font-family: serif;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto 25px;
+	width: 80px;
+	height: 4px;
+	background-color: $mainColor;
+}
+
+//NAVIGATION
+
+.navbar {
+	background-color: $bg-color;
+	font-weight: bold;
+	border-bottom: 1px solid $mainColor;
+	z-index: 5;
+	div {
+		img {
+			height: 40px;
+			width: 40px;
+		}
+		.navbar-collapse {
+			.nav-link {
+				font-size: 18px;
+				transition: color 0.6s;
+				color: $font-color;
+			}
+			.nav-link:hover {
+				color: $bg-secondary;
+			}
+			.active {
+				color: $mainColor;
+			}
+		}
+		.navbar-brand {
+			padding: 0;
+			font-size: 25px;
+			span {
+				color: $mainColor;
+				font-family: serif;
+			}
+		}
+	}
+}
+
+// HEADER
+
+.header {
+	position: relative;
+	background-image: url('../img/header_sm.jpg');
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.greenhouse-bg {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(56, 56, 56, 0.596);
+		z-index: -1;
+	}
+
+	.greenhouse-text {
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+		color: $mainColor;
+		.name {
+			color: $bg-color;
+		}
+		.btn {
+			font-weight: bold;
+			padding: 8px 25px;
+			border-color: $bg-color;
+			color: $bg-color;
+		}
+		.btn:hover {
+			background-color: $bg-color;
+			color: $font-color;
+		}
+	}
+}
+
+.introduction {
+	position: relative;
+
+	.introduction-img {
+		padding: 10px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.introduction-text {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 0 20px;
+		button {
+			font-weight: bold;
+			padding: 8px 25px;
+			background-color: $bg-secondary;
+			border-color: $bg-secondary;
+			color: $bg-color;
+		}
+		button:hover {
+			background-color: transparent;
+			color: $font-color;
+		}
+		button:active {
+			background-color: $mainColor;
+			border-color: $mainColor;
+		}
+	}
+}
+
+// MAIN
+
+.achievements {
+	background-color: $bg-secondary;
+	text-align: center;
+	color: $bg-color;
+
+	i {
+		padding: 10px;
+		font-size: 48px;
+		text-shadow: 0 0 5px #000;
+	}
+
+	.achievements-list {
+		padding: 20px 0;
+		.achievements-number {
+			font-size: 25px;
+		}
+		p {
+			font-size: 18px;
+		}
+	}
+}
+
+.aboutme {
+	.aboutme-img {
+		padding: 10px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.aboutme-text {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 0 20px;
+	}
+}
+
+.passion {
+	background-color: $bg-secondary;
+	text-align: center;
+	.card {
+		border-radius: 0px;
+		background-color: $bg-color;
+		color: $bg-secondary;
+		h5 {
+			font-weight: bold;
+		}
+		.card-img-top {
+			border-radius: 0px;
+		}
+	}
+	h2 {
+		color: $bg-color;
+	}
+}
+
+.prices {
+	.price-wrap {
+		.price-box {
+			padding: 20px 10px;
+			border: 3px solid $bg-secondary;
+			box-shadow: 5px 5px 10px $bg-secondary;
+			.btn-primary {
+				background-color: $mainColor;
+				border: 1px solid $mainColor;
+			}
+			.btn-primary:hover {
+				background-color: $bg-secondary;
+				border: 1px solid $bg-secondary;
+			}
+			h3 {
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+.questions {
+	position: relative;
+	background-image: url('../img/cosmos-4868376_640.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+	z-index: 0;
+	.questions-text {
+		text-shadow: rgb(0, 0, 0) 0 0 5px;
+		color: $bg-color;
+	}
+
+	.questions-ans {
+		.btn {
+			margin: 5px;
+			font-weight: bold;
+			padding: 8px 25px;
+			border-color: $bg-color;
+			color: $bg-color;
+			box-shadow: rgb(0, 0, 0) 0 0 10px;
+			text-shadow: rgb(0, 0, 0) 0 0 5px;
+			transition: 0.5s;
+		}
+		.btn:hover {
+			background-color: $bg-color;
+			color: $font-color;
+			text-shadow: none;
+		}
+	}
+}
+
+.contact {
+	h4 {
+		padding-top: 20px;
+		text-transform: uppercase;
+	}
+	.circle {
+		display: inline-block;
+		margin: 10px;
+
+		a {
+			color: transparent;
+		}
+		.fab {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+			width: 40px;
+			color: $bg-color;
+			background-color: $bg-secondary;
+			border-radius: 20px;
+			text-decoration: none;
+		}
+		.fab:hover {
+			background: $mainColor;
+		}
+	}
+}
+
+// FOOTER
+
+footer {
+	background-color: $bg-secondary;
+	color: $bg-color;
+	font-weight: bold;
+}
+
+// MEDIA
+
+@media (min-width: 375px) {
+	.header {
+		h1 {
+			font-size: 36px;
+		}
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		.greenhouse-text {
+			width: 80%;
+			h1 {
+				font-size: 45px;
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+	.introduction {
+		position: relative;
+
+		.introduction-img {
+			padding: 10px 0;
+		}
+		.introduction-text {
+			h2 {
+				font-size: 40px;
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.header {
+		background-image: url('../img/header_lg.jpg');
+		.greenhouse-text {
+			width: 60%;
+		}
+	}
+	.passion {
+		.card {
+			.card-img-top {
+				transition: opacity 0.7s;
+				z-index: 2;
+			}
+			.card-img-top:hover {
+				opacity: 0;
+			}
+			.card-body {
+				top: 50%;
+				transform: translatey(-50%);
+				position: absolute;
+				z-index: 1;
+			}
+		}
+	}
+}
+
+// JS
+
+.reveal {
+	background-color: $bg-secondary;
+}
